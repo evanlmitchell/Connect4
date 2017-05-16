@@ -1,19 +1,20 @@
 # create and display Connect4 board
 class Board
-
   NUMBER_OF_THINGS = 7
 
+  def initialize
+    @lanes = Array.new(NUMBER_OF_THINGS) { [] }
+  end
+
   def display
-    lanes = Array.new(NUMBER_OF_THINGS) { [] }
-    lanes.each_with_index { |lane, position|
-
+    @lanes.each_with_index { |lane, position|
       puts "#{position + 1} #{lane}"
-
     }
   end
 
-  def add_piece
+  def add_piece()
   end
+
 end
 
 
